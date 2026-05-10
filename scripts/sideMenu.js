@@ -55,13 +55,10 @@ for (let i = 0; i < GlobalMenuItems.length; ++i) {
 * The code of the key that was pressed.
 *************************************************************************/
 function keyDownMenuBtnFocused(key) {
-    if (key === "ArrowDown" || key === "ArrowUp" ||
-            key === "Space" || key === "Enter") {
+    if (key === "ArrowDown" || key === "ArrowUp") {
             menuBtn.click(); //open menu
             if (key === "ArrowUp") { //Focus on last item
                 GlobalFocusedMenuItem.set(GlobalMenuItems.length-1);
-            } else { //Focus on first item
-                GlobalFocusedMenuItem.set(0);
             }
             GlobalMenuItems[GlobalFocusedMenuItem.get()].focus();
         }
